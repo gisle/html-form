@@ -119,7 +119,7 @@ behaves.  The following are all the options currently recognized:
 
 =item C<< base => $uri >>
 
-This is the URI used to retrive the original document.  This option is not optional ;-)
+This is the URI used to retrieve the original document.  This option is not optional ;-)
 
 =item C<< charset => $str >>
 
