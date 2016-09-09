@@ -3,7 +3,7 @@
 use strict;
 use Test qw(plan ok);
 
-plan tests => 127;
+plan tests => 128;
 
 use HTML::Form;
 
@@ -25,6 +25,7 @@ ok(@f, 2);
 my $f = shift @f;
 ok($f->value("name"), "");
 ok($f->dump, "GET http://localhost/abc [foo]\n  name=                          (text)\n");
+ok( $f->attr('action'), 'abc' );
 
 my $req = $f->click;
 ok($req->method, "GET");

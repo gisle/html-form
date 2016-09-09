@@ -187,7 +187,7 @@ sub parse
     while (my $t = $p->get_tag) {
 	my($tag,$attr) = @$t;
 	if ($tag eq "form") {
-	    my $action = delete $attr->{'action'};
+	    my $action = $attr->{'action'};
 	    $action = "" unless defined $action;
 	    $action = URI->new_abs($action, $base_uri);
 	    $f = $class->new($attr->{'method'},
