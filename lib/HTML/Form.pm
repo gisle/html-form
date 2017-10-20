@@ -1391,6 +1391,7 @@ sub form_name_value
 {
     my $self = shift;
     return unless $self->{clicked};
+    $self->value("") unless defined $self->value;
     return $self->SUPER::form_name_value(@_);
 }
 
